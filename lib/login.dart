@@ -1,5 +1,5 @@
 import 'dart:convert';
-import 'dart:js';
+
 
 import 'package:flutter/material.dart';
 import 'package:http/http.dart';
@@ -18,7 +18,7 @@ class _LoginState extends State<Login> {
   void login(String email, String password) async{
 
     try{
-      Response response = await post(Uri.parse("https://reqres.in/api/register"),
+      Response response = await post(Uri.parse("https://recruitment.africremit.ca/api/login"),
       body: {
         'email' : email,
         'password': password,
@@ -81,6 +81,7 @@ class _LoginState extends State<Login> {
               ElevatedButton(
                 onPressed: (){
                   login(emailController.text.toString(), passwordController.text.toString());
+
                 },
 
 
