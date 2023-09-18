@@ -1,3 +1,4 @@
+import 'package:basic_login/login.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -11,9 +12,10 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'basic login with REST API',
 
-     // home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home: const Login(),
     );
   }
 }
